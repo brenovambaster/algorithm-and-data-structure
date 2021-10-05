@@ -27,7 +27,7 @@
   - The .size() function can be used to return the number of elements in a vector, like ```name.size().```
 
 ## 3 Vectors
-- In C++, a vector is a dynamic list of items, that can shrink and grow in size. It is created using ``std::vector<type>name;`` and it can only store values of the same type. To use vectors, it is necessary to ``#include`` the `vector` library.
+  - In C++, a vector is a dynamic list of items, that can shrink and grow in size. It is created using ``std::vector<type>name;`` and it can only store values of the same type. To use vectors, it is necessary to ``#include`` the `vector` library.
   ```c++
   #include <iostream>
   #include <vector>
@@ -41,4 +41,21 @@
     grades[2] = 98;
     }
   ```
+
+  ### **.push_back() & .pop_back()**
+  The following functions can be used to add and remove an element in a vector:
+  * `.push_back()` to add an element to the “end” of a vector
+  * `.pop_back()` to remove an element from the “end” of a vector
+
+  ```c++
+  std::vector<std::string> wishlist;
+  wishlist.push_back("Oculus");
+  wishlist.push_back("Telecaster");
+  wishlist.pop_back();
+  std::cout << wishlist.size(); 
+  // Prints: 1
+  ```
+
+## 4 References & Pointers
+  [...]
 

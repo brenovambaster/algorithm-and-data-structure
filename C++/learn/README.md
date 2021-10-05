@@ -1,13 +1,44 @@
-## Tipos de dados:
+## 0 Tipos de dados:
 ```c++
-    bool myBool = true ; // Variáveis booleanas. Tem valor true ou false
+    1 bool myBool = true ; // Variáveis booleanas. Tem valor true ou false
     2 int myInt = - 42; // Números inteiros (positivos e negativos)
     3 unsigned myUnsig = 2 0; // Números naturais
     4 double myDouble = 3 . 1 4 ; // Números racionais
     5 char myChar = "X" ; // Letras
-    6 s t r i n g myString = " H ell o world ! " ; // Strings
+    6 string myString = "Hello world !" ; // Strings
 ```
-## Entrada e Saída.
-  * Escreve algo no terminal ``c ou t << "Algo " << e n dl ;``
-  * Leitura de entrada: ``ci n >> x ;`` 
-  * 
+## 1 Entrada e Saída.
+  * Escreve algo no terminal ``cout << "Algo " << endl ;``
+  * Leitura de entrada: ``cin >> x ;`` 
+
+## 2 Vector Type
+- During the creation of a C++ vector, the data type of its elements must be specified. Once the vector is created, the type cannot be changed.
+- **Index:** An index refers to an element’s position within an ordered list, like a vector or an array. The first element has an index of 0. A specific element in a vector or an array can be accessed using its index, like `name[index]`.
+
+  ```c++ 
+    std::vector<double> order = {3.99, 12.99, 2.49};
+    // What's the first element?
+    std::cout << order[0];
+    // What's the last element?
+    std::cout << order[2];
+  ```
+
+### **.size() Function**
+  - The .size() function can be used to return the number of elements in a vector, like ```name.size().```
+
+## 3 Vectors
+- In C++, a vector is a dynamic list of items, that can shrink and grow in size. It is created using ``std::vector<type>name;`` and it can only store values of the same type. To use vectors, it is necessary to ``#include`` the `vector` library.
+  ```c++
+  #include <iostream>
+  #include <vector>
+ 
+  int main() {
+    
+    std::vector<int> grades(3);
+    
+    grades[0] = 90;
+    grades[1] = 86;
+    grades[2] = 98;
+    }
+  ```
+

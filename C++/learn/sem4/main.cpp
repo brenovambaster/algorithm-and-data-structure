@@ -16,7 +16,7 @@ int main()
     lista1.insere(1,aluno2);
     lista1.insere(0,aluno3);
     lista1.imprime();
-
+    cout << "\nindice: "<< lista1.busca(40)<< endl;
     
 
     return 0;

@@ -24,31 +24,35 @@ public:
             alunos[i].imprime(); // estamos invocando o método imprime da classe aluno
         }
     }
-    void verificaLimiteIntervalo(unsigned posicao, unsigned tamanho)
+    int verificaLimiteIntervalo(unsigned posicao, unsigned tamanho)
     {
         if (posicao > tamanho)
         {
             cout << "posicao > que tamanho permitido" << endl;
-            return;
+            return 0;
         }
         if (MAX_ALUN == tamanho)
         {
             cout << "Lista cheia" << endl;
-            return;
+            return 0;
         }
+        return 1;
     }
-    void insere(unsigned posicao, Aluno &aluno)
+    void insere(unsigned posicao, const Aluno &aluno)
     {
-        verificaLimiteIntervalo(posicao, tamanho);
-        // de sl oc a n d o t o d o s Alunos de p o s i c a o em d i a n t e
-        for (int i = tamanho; i > posicao; i--)
+        if (verificaLimiteIntervalo(posicao, tamanho))
         {
-            alunos[i] = alunos[i - 1];
+            // des locandotodos Alunos de posicao em diante
+            for (int i = tamanho; i > posicao; i--)
+            {
+                alunos[i] = alunos[i - 1];
+            }
+
+            alunos[posicao] = aluno;
+            tamanho++;
         }
-        alunos[posicao] = aluno;
-        tamanho++;
     }
-    
+
     int busca(unsigned chave)
     {
         for (int i = 0; i < tamanho; i++)

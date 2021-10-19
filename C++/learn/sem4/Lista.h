@@ -42,7 +42,7 @@ public:
     {
         if (verificaLimiteIntervalo(posicao, tamanho))
         {
-            // des locandotodos Alunos de posicao em diante
+            // deslocando todos Alunos de posicao em diante -- direita -> esquerda é melhor
             for (int i = tamanho; i > posicao; i--)
             {
                 alunos[i] = alunos[i - 1];
@@ -53,6 +53,7 @@ public:
         }
     }
 
+    /*  retorna -1 caso nao encontre */
     int busca(unsigned chave)
     {
         for (int i = 0; i < tamanho; i++)
@@ -62,7 +63,27 @@ public:
                 return i;
             }
         }
+        cout << " Chave nao encontrada: erro:";
         return -1;
+    }
+    int deletar(unsigned chave)
+    {
+        int posicao = busca(chave);
+        if (posicao >= 0)
+        {
+            tamanho--;
+            for (unsigned i = posicao; i < tamanho; i++)
+            {
+                alunos[i] = alunos[i + 1];
+            }
+            cout << "Removido com sucesso.Chave removida:" << chave << endl;
+            return 1;
+        }
+        else
+        {
+            cout << "Chave do Aluno nao encontrado\n";
+            return -1;
+        }
     }
     ~Lista(){};
 };

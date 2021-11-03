@@ -18,5 +18,14 @@ int main()
 {
     Aluno *alunomain = NULL;
     alunomain = fooDin();
-    cout << alunomain->nome;
+    if (!alunomain) // caso falhe a alocação, aluno1 será = NULL
+    {
+        cout << "Erro:falta de memoria" << endl;
+    }
+    else
+    {
+        cout << alunomain->nome;
+    }
+    delete alunomain;
+    cout <<"\n Depois de deletado aparece lixo : "<< alunomain->nome;
 }

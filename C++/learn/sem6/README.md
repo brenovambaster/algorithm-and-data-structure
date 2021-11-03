@@ -119,11 +119,14 @@ int main()
     cout <<"\n Depois de deletado aparece lixo : "<< alunomain->nome;
 }
 ```
-    Nota: Note que ao deletarm, estamos liberando a memória que foi utilizada para aluno. O operador delete imediatamente invoca o destrutor da classe. Esse fato será útil na nossa lista encadeada que veremos à seguir neste estudo.
-
-
 ```diff 
-+ Arquivos usados: 
++ Nota: Note que ao deletarm, estamos liberando a memória que foi utilizada para aluno. 
+! O operador delete imediatamente invoca o destrutor da classe. Esse fato será útil na nossa lista encadeada que veremos à seguir neste estudo.
+
 ```
+
+### Arquivos usados: 
+
 * [**Aluno.h**](Aluno.h) 
 * [**main.cpp**](main.cpp)
+* **Continuação:>>** [**Lista encadeada**](lista_encadeada.md)

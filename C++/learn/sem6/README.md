@@ -1,5 +1,7 @@
 # Alocação Dinâmica de memória: 
-
+ **Próximo tópico:>>** [**3 Lista encadeada**](lista_encadeada.md)  
+ 
+ 
 Considere a estrutura Alunos: ***Aluno.h***
 ```c++
 #ifndef ALUNO_H_INCLUDED

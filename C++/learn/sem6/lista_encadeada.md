@@ -207,7 +207,7 @@ void remover(int chave)
     }
 ```
 
-***Arquivos usados:*** 
+***Arquivos complestos  usados neste tópico:*** 
 
 [ListaEncadeada.h](ListaEncadeada.h)  
 [main.cpp](main_encadeada.cpp)  

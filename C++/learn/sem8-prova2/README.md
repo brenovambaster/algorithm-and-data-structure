@@ -6,8 +6,8 @@
 - [x] ✅ 4. Inserir um novo Cliente. Assinatura: void insere(Cliente cliente)
 - [x] ✅ 5. Nodo * buscaNod(int chave) Retornar um ponteiro para um Nodo que tem o cliente com a chavedada. 
 - [x] ✅ 6. void imprimeAncestrais(Nodo * nodo) Percorrer listando as chaves dos clientes do nodo apontado pelo ponteiro que é passado como parâmetro dele até a raiz (de baixo para cima).
-- [ ] ✅7. void rotacionaEsquerda() Rotacionar a árvore para esquerda.
-- [ ] ✅8. void rotacionaDireita() Rotacionar a árvore para direita.
+- [x] ✅7. void rotacionaEsquerda() Rotacionar a árvore para esquerda.
+- [x] ✅8. void rotacionaDireita() Rotacionar a árvore para direita.
 
 ## ***Observações***
 - [x] ✅ A operação 5, caso a chave não esteja na árvore, deve retornar NULL.

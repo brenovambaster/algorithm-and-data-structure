@@ -1,0 +1,87 @@
+
+Imprime pre ordem: 
+nome: a8 chave:8
+nome: a5 chave:5
+nome: a3 chave:3
+nome: a2 chave:2
+nome: a1 chave:1
+nome: a4 chave:4
+nome: a6 chave:6
+nome: a7 chave:7
+nome: a12 chave:12
+nome: a9 chave:9
+nome: a11 chave:11
+nome: a10 chave:10
+
+
+Imprime Ancestrais de 10: 
+
+nome: a11 chave:11
+nome: a9 chave:9
+nome: a12 chave:12
+nome: a8 chave:8
+Imprime ancestrais de 1 
+
+nome: a2 chave:2
+nome: a3 chave:3
+nome: a5 chave:5
+nome: a8 chave:8
+XXXXXXXXXXXXXXXXXXXXXXXXXX
+
+Rotaciona a direita: 
+
+Imprime pre ordem: 
+nome: a5 chave:5
+nome: a3 chave:3
+nome: a2 chave:2
+nome: a1 chave:1
+nome: a4 chave:4
+nome: a8 chave:8
+nome: a6 chave:6
+nome: a7 chave:7
+nome: a12 chave:12
+nome: a9 chave:9
+nome: a11 chave:11
+nome: a10 chave:10
+
+
+Imprime Ancestrais de 10: 
+
+nome: a11 chave:11
+nome: a9 chave:9
+nome: a12 chave:12
+nome: a8 chave:8
+nome: a5 chave:5
+ Imprime ancestrais de 1 
+
+nome: a2 chave:2
+nome: a3 chave:3
+nome: a8 chave:8
+nome: a5 chave:5
+XXXXXXXXXXXXXXXXXXXXXXXXXX
+
+ Rotaciona esquerda 2x
+
+Imprime pre ordem 
+nome: a12 chave:12
+nome: a8 chave:8
+nome: a5 chave:5
+nome: a3 chave:3
+nome: a2 chave:2
+nome: a1 chave:1
+nome: a4 chave:4
+nome: a6 chave:6
+nome: a7 chave:7
+nome: a9 chave:9
+nome: a11 chave:11
+nome: a10 chave:10
+
+
+nome: a11 chave:11
+nome: a9 chave:9
+nome: a8 chave:8
+nome: a12 chave:12
+nome: a2 chave:2
+nome: a3 chave:3
+nome: a8 chave:8
+nome: a12 chave:12

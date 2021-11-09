@@ -16,7 +16,6 @@ public:
         if (!raiz)
         {
             raiz = novoNodo;
-            raiz->pai = NULL;
             return;
         }
         while (true)
@@ -101,6 +100,30 @@ public:
             apaga(nodePtr->filhoDireita);
         delete nodePtr;
     }
+    void rotacionaEsquerda()
+    {
+        Nodo *subArvDireita = raiz->filhoDireita;
+
+        raiz->filhoDireita = subArvDireita->filhoEsquerda;
+        raiz->filhoDireita->pai = raiz;
+        subArvDireita->filhoEsquerda = raiz;
+        raiz->pai = subArvDireita;
+        raiz = subArvDireita;
+        raiz->pai = NULL;
+    }
+
+    void rotacionaDireita()
+    {
+        Nodo *subArvEsquerda = raiz->filhoEsquerda;
+
+        raiz->filhoEsquerda = subArvEsquerda->filhoDireita;
+        subArvEsquerda->filhoDireita->pai = raiz;
+        subArvEsquerda->filhoDireita = raiz;
+        raiz->pai = subArvEsquerda;
+        raiz = subArvEsquerda;
+        raiz->pai = NULL;
+    }
+
     ~ABP()
     {
         if (raiz)

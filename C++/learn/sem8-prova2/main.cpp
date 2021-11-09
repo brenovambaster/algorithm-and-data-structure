@@ -32,11 +32,43 @@ int main()
     abp.insere(a1);
     abp.insere(a7);
 
-    cout << "PESQUISA:\n";
+    cout << "\nImprime pre ordem: \n";
+    abp.preOrdem();
+    cout << "\nImprime Ancestrais de 10: \n";
+    abp.imprimeAncestrais(abp.buscaNod(10));
+    cout << "\nImprime ancestrais de 1 \n";
+    abp.imprimeAncestrais(abp.buscaNod(1));
+    cout << "\nXXXXXXXXXXXXXXXXXXXXXXXXXX" << endl;
+
+    cout << "\nRotaciona a direita: \n";
+    abp.rotacionaDireita();
+
+    cout << "\nImprime pre ordem: \n";
+    abp.preOrdem();
+    cout << "\nImprime Ancestrais de 10: \n";
+    abp.imprimeAncestrais(abp.buscaNod(10));
+    cout << "\n Imprime ancestrais de 1 \n";
+    abp.imprimeAncestrais(abp.buscaNod(1));
+
+    cout << "\nXXXXXXXXXXXXXXXXXXXXXXXXXX" << endl;
+
+    cout << "\n Rotaciona esquerda 2x\n";
+    abp.rotacionaEsquerda();
+    abp.rotacionaEsquerda();
+    cout << "\nImprime pre ordem \n";
+    abp.preOrdem();
+    cout << "\nImprime ancestrais 10 \n";
+    abp.imprimeAncestrais(abp.buscaNod(10));
+    cout << "\nImprime ancestrais 1 \n";
+    abp.imprimeAncestrais(abp.buscaNod(1));
+
+    return 0;
+
+    /* cout << "PESQUISA:\n";
     cout << abp.buscaNod(14);
     cout << "ANCESTRAIS:\n";
     abp.imprimeAncestrais(abp.buscaNod(10));
-
+ */
     /* abp.preOrdem();
     abp.posOrdem(); */
 }

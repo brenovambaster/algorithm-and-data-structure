@@ -1,14 +1,14 @@
-#ifndef LISTANODO_H_INCLUDED
-#define LISTANODO_H_INCLUDED
+#ifndef ABP_H_INCLUDED
+#define ABP_H_INCLUDED
 
 #include "Nodo.h"
 using namespace std;
 
-class Arvore
+class ABP
 {
 public:
     Nodo *raiz = NULL;
-    Arvore() {}
+    ABP() {}
     void insere(const Aluno &aluno)
     {
         Nodo *novoNodo = new Nodo(aluno);
@@ -16,17 +16,21 @@ public:
         if (!raiz)
         {
             raiz = novoNodo;
+            raiz->pai = NULL;
             return;
         }
         while (true)
         {
             if (aluno.chave > nodoAtual->aluno.chave) // ir para direita. (aluno > nodo-atual)
             {
-                if (nodoAtual->filhoDireita) // ainda não chegamos
+                if (nodoAtual->filhoDireita)
+                { // ainda não chegamos
                     nodoAtual = nodoAtual->filhoDireita;
+                }
                 else
                 { // caso seja null, será uma folha. Aí podemos iserir novo nodo
                     nodoAtual->filhoDireita = novoNodo;
+                    novoNodo->pai = nodoAtual;
                     return;
                 }
             }
@@ -37,11 +41,43 @@ public:
                 else
                 { //chegamos na  folha
                     nodoAtual->filhoEsquerda = novoNodo;
+                    novoNodo->pai = nodoAtual;
                     return;
                 }
             }
         }
     }
+    Nodo *buscaNod(int chave)
+    {
+        Nodo *nodoAtual = raiz;
+        while (nodoAtual)
+        {
+            if (nodoAtual->aluno.chave == chave)
+            {
+                return nodoAtual;
+            }
+            else if (nodoAtual->aluno.chave < chave)
+            {
+                nodoAtual = nodoAtual->filhoDireita;
+            }
+            else
+            {
+                nodoAtual = nodoAtual->filhoEsquerda;
+            }
+        }
+        return NULL;
+    }
+    void imprimeAncestrais(Nodo *nodo)
+    {
+        // Apenas imprimir o pai do pai até chegar na raiz;
+        while (nodo)
+        {
+            cout << endl;
+            nodo->aluno.imprime();
+            nodo = nodo->pai;
+        }
+    }
+
     void preOrdem()
     {
         if (raiz)
@@ -65,7 +101,7 @@ public:
             apaga(nodePtr->filhoDireita);
         delete nodePtr;
     }
-    ~Arvore()
+    ~ABP()
     {
         if (raiz)
         {

@@ -12,15 +12,12 @@ int main()
     Aluno d(4, "d");
     Aluno e(5, "e");
 
-    Nodo n1(a);
-    Nodo n2(b);
-    Nodo n3(c);
-    Nodo n4(d);
-    Nodo n5(e);
-
     Arvore av1;
-    
-
-
-
+    av1.insere(a);
+    av1.insere(c);
+    av1.insere(b);
+    av1.insere(e);
+    av1.insere(d);
+    av1.preOrdem();
+    av1.posOrdem();
 }

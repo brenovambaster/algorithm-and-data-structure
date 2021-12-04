@@ -36,7 +36,7 @@ int main()
     abp.preOrdem();
     cout << "\nImprime Ancestrais de 10: \n";
     abp.imprimeAncestrais(abp.buscaNod(10));
-    cout << "\nImprime ancestrais de 1 \n";
+    cout << "\n\nImprime ancestrais de 1 \n";
     abp.imprimeAncestrais(abp.buscaNod(1));
     cout << "\nXXXXXXXXXXXXXXXXXXXXXXXXXX" << endl;
 
@@ -47,7 +47,7 @@ int main()
     abp.preOrdem();
     cout << "\nImprime Ancestrais de 10: \n";
     abp.imprimeAncestrais(abp.buscaNod(10));
-    cout << "\n Imprime ancestrais de 1 \n";
+    cout << "\n\n Imprime ancestrais de 1 \n";
     abp.imprimeAncestrais(abp.buscaNod(1));
 
     cout << "\nXXXXXXXXXXXXXXXXXXXXXXXXXX" << endl;
@@ -59,9 +59,9 @@ int main()
     abp.preOrdem();
     cout << "\nImprime ancestrais 10 \n";
     abp.imprimeAncestrais(abp.buscaNod(10));
-    cout << "\nImprime ancestrais 1 \n";
+    cout << "\n\nImprime ancestrais 1 \n";
     abp.imprimeAncestrais(abp.buscaNod(1));
-
+    abp.~ABP();
     return 0;
 
     /* cout << "PESQUISA:\n";

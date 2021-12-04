@@ -27,7 +27,7 @@ public:
                     nodoAtual = nodoAtual->filhoDireita;
                 }
                 else
-                { // caso seja null, será uma folha. Aí podemos iserir novo nodo
+                { // caso seja null, não teremos um nodo maior que o F.D. Aí podemos iserir novo nodo
                     nodoAtual->filhoDireita = novoNodo;
                     novoNodo->pai = nodoAtual;
                     return;
@@ -38,7 +38,7 @@ public:
                 if (nodoAtual->filhoEsquerda) // ainda nao chegamos
                     nodoAtual = nodoAtual->filhoEsquerda;
                 else
-                { //chegamos na  folha
+                {
                     nodoAtual->filhoEsquerda = novoNodo;
                     novoNodo->pai = nodoAtual;
                     return;
@@ -98,18 +98,20 @@ public:
             apaga(nodePtr->filhoEsquerda);
         if (nodePtr->filhoDireita)
             apaga(nodePtr->filhoDireita);
+        cout << "\n---delete--\n";
+        nodePtr->aluno.imprime();
         delete nodePtr;
     }
     void rotacionaEsquerda()
     {
         Nodo *subArvDireita = raiz->filhoDireita;
 
-        raiz->filhoDireita = subArvDireita->filhoEsquerda;
-        raiz->filhoDireita->pai = raiz;
-        subArvDireita->filhoEsquerda = raiz;
-        raiz->pai = subArvDireita;
-        raiz = subArvDireita;
-        raiz->pai = NULL;
+        raiz->filhoDireita = subArvDireita->filhoEsquerda; // f.d.a= c
+        raiz->filhoDireita->pai = raiz;                    // p c = a
+        subArvDireita->filhoEsquerda = raiz;               // f.e.arvd = a
+        raiz->pai = subArvDireita;                         // p a = b
+        raiz = subArvDireita;                              //  raiz = b
+        raiz->pai = NULL;                                  // pai de b = null
     }
 
     void rotacionaDireita()

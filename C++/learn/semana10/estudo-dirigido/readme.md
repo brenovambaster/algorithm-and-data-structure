@@ -1,6 +1,7 @@
-```c++
-class FilaPrioridade { 
-	Aluno T [MAX_ALUNOS];
-	int n;
-}
-```
+* [x] Cria
+* [x] Insere
+* [x] Busca
+* [x] Altera
+
+
+

@@ -66,6 +66,7 @@ public:
     {
         for (int i = 1; i <= total_cli; i++)
         {
+            cout << "posicao[ " << i << "]";
             fila_cli[i].imprime();
         }
     }

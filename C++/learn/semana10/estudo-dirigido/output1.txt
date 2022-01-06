@@ -1,0 +1,40 @@
+posicao[ 1] chave : 20 ; nome : c1
+----------------------------------------
+
+Insere c2 a c9
+Impirme tudo
+posicao[ 1] chave : 80 ; nome : c2
+posicao[ 2] chave : 60 ; nome : c8
+posicao[ 3] chave : 40 ; nome : c3
+posicao[ 4] chave : 50 ; nome : c4
+posicao[ 5] chave : 10 ; nome : c5
+posicao[ 6] chave : 25 ; nome : c6
+posicao[ 7] chave : 35 ; nome : c7
+posicao[ 8] chave : 20 ; nome : c1
+posicao[ 9] chave : 45 ; nome : c9
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+Remove: 
+
+imprime: 
+posicao[ 1] chave : 60 ; nome : c8
+posicao[ 2] chave : 50 ; nome : c4
+posicao[ 3] chave : 40 ; nome : c3
+posicao[ 4] chave : 45 ; nome : c9
+posicao[ 5] chave : 10 ; nome : c5
+posicao[ 6] chave : 25 ; nome : c6
+posicao[ 7] chave : 35 ; nome : c7
+posicao[ 8] chave : 20 ; nome : c1
+
+Remove: 
+
+Remove: 
+
+Remove: 
+
+imprime: 
+posicao[ 1] chave : 40 ; nome : c3
+posicao[ 2] chave : 35 ; nome : c7
+posicao[ 3] chave : 25 ; nome : c6
+posicao[ 4] chave : 20 ; nome : c1
+posicao[ 5] chave : 10 ; nome : c5

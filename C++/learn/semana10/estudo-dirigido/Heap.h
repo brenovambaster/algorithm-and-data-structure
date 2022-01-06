@@ -13,37 +13,35 @@ public:
     Heap()
     {
     }
-    void subir(int i)
+    void subir(int posicao)
     {
-        int j;
-        j = i / 2;
-        if (j >= 1)
+        int pai;
+        pai = posicao / 2;
+        if (pai >= 1)
         {
-            if (fila_cli[i].CPF > fila_cli[j].CPF)
+            if (fila_cli[posicao].CPF > fila_cli[pai].CPF)
             {
-                swap(fila_cli[i], fila_cli[j]);
-                subir(j);
+                swap(fila_cli[posicao], fila_cli[pai]);
+                subir(pai);
             }
         }
     }
-    void descer(int i)
+    void descer(int posicao)
     {
         int j;
-        j = 2 * i;
-        if (j <= total_cli)
+        j = 2 * posicao;
+
+        if (j < total_cli)
         {
-            if (j < total_cli)
+            if (fila_cli[j + 1].CPF > fila_cli[j].CPF)
             {
-                if (fila_cli[j + 1].CPF > fila_cli[j].CPF)
-                {
-                    j++;
-                }
+                j++;
             }
-            if (fila_cli[i].CPF < fila_cli[j].CPF)
-            {
-                swap(fila_cli[i], fila_cli[j]);
-                descer(j);
-            }
+        }
+        if (fila_cli[posicao].CPF < fila_cli[j].CPF)
+        {
+            swap(fila_cli[posicao], fila_cli[j]);
+            descer(j);
         }
     }
     void inserir(const Cliente &cliente)
@@ -70,5 +68,6 @@ public:
             fila_cli[i].imprime();
         }
     }
+    ~Heap() {}
 };
 #endif
